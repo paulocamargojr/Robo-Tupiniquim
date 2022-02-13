@@ -6,7 +6,7 @@ namespace Tupiniquim.ConsoleApp
     {
         static void Main(string[] args)
         {
-            int k = 0;
+            int k = 1;
             Console.WriteLine("Insira a primeira coordenada:");
             int x = Convert.ToInt32(Console.ReadLine());
 
@@ -16,7 +16,7 @@ namespace Tupiniquim.ConsoleApp
             do
             {
 
-                Console.WriteLine("Insira a posição inicial do robo(Separe as coordenadas e a visão do robô por espaço):");
+                Console.WriteLine("Insira a posição inicial do robo " + k + "(Separe as coordenadas e a visão do robô por espaço):");
                 string posicaoInicial = Console.ReadLine();
                 char[] coordenadasIniciais = posicaoInicial.ToCharArray();
 
@@ -49,7 +49,7 @@ namespace Tupiniquim.ConsoleApp
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Sucesso!");
                     Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine("Insira um comando para o robo:");
+                    Console.WriteLine("Insira um comando para o robo " + k);
                     string comando = Console.ReadLine();
                     char[] comandos = comando.ToCharArray();
 
@@ -194,7 +194,7 @@ namespace Tupiniquim.ConsoleApp
 
                 k++;
 
-            } while (k < 2);
+            } while (k < 3);
 
             Console.ReadKey();
         }
